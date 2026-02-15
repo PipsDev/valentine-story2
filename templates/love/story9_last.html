@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>💖 One Last Thing…</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="last-bg">
+
+    <!-- Container -->
+    <div class="last-container fade-in">
+
+        <h2>Before we finish…</h2>
+
+        <!-- Reveal button -->
+        <button id="revealBtn" class="big-btn">
+            💌 One Last Thing…
+        </button>
+
+        <!-- Hidden message -->
+        <div id="hiddenMessage" class="hidden-message">
+            <div class="letter">
+                <p>I didn’t make this to impress you.<br>I made it because you matter to me.</p>
+
+                <p>I know distance isn’t easy for you.<br>I know breaks can make things feel different between us.</p>
+
+                <p>This space doesn’t erase what we’ve built.<br>It doesn’t erase how you’ve mattered to me or how you still do.</p>
+
+                <p>Every memory here is real. Every word is honest.<br>You’ve been a beautiful part of my life, and I’m deeply grateful for you.</p>
+
+                <p class="highlight big-line">
+                    If love is a choice, then today, I choose you again.
+                </p>
+
+                <p>I’m not asking you to force feelings.<br>I’m not asking you to ignore what’s hard.</p>
+
+                <p>I just want you to know that even from a distance,<br>my care for you is real, steady, and patient.</p>
+
+                <p>I’m grateful for you, now, and always.</p>
+
+                <p class="valentine">Happy Valentine’s Day ❤️</p>
+
+                <a href="{% url 'story10' %}" class="next-btn">Continue →</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const btn = document.getElementById('revealBtn');
+        const msg = document.getElementById('hiddenMessage');
+
+        btn.addEventListener('click', () => {
+            btn.style.display = "none"; // hide button
+            msg.classList.add('show');   // reveal message
+        });
+    </script>
+
+</body>
+</html>

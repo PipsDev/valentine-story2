@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Things I Never Say Out Loud 🫀</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="story8-bg">
+
+    
+    <div class="overlay"></div>
+
+    
+    <div class="floating-particles"></div>
+
+    
+    <div class="story8-container fade-in">
+        <h1>💌 Things I Never Say Out Loud</h1>
+
+        <p class="confession">There are things i feel but don’t talk about, not Because I'm hiding them, but because i don’t want to make you feel uncomfortable. </p>
+        <p class="confession">I don’t say it out loud very often, but i love you more than i can put into words. I think about our first kiss, and the litle moments we've shared, you mean so much to me and i carry it quitly in my heart</p>
+        <p class="confession">I love spending time with you, but i don’t always say it, because i know sometimes social things can be hard for you. I really enjoy being with you I'm not even going to lie 😊</p>
+        <p></p>
+
+        <a href="{% url 'story9' %}" class="next-btn">Next →</a>
+    </div>
+
+   
+    <script>
+        const container = document.querySelector('.floating-particles');
+
+        const emojis = ["🌸"];
+        for(let i=0; i<30; i++){
+            const p = document.createElement('div');
+            p.classList.add('particle');
+            p.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.fontSize = (12 + Math.random()*20) + 'px';
+            p.style.animationDuration = (5 + Math.random()*5) + 's';
+            container.appendChild(p);
+        }
+    </script>
+
+</body>
+</html>

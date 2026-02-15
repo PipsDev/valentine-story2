@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Story 6 💜</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="story6-bg">
+
+    <div class="story6-card">
+
+        <h1>Fun Times</h1>
+        <p>I watched this video too many times also😂</p>
+        <p>But let's keep it PG 13🤣🤣</p>
+
+        <!-- Video container for side by side layout -->
+        <div class="video-row">
+            <video autoplay muted loop playsinline class="mini-video">
+                <source src="{% static 'videos/memory3.mp4' %}" type="video/mp4">
+            </video>
+
+            <video autoplay muted loop playsinline class="mini-video">
+                <source src="{% static 'videos/memory4.mp4' %}" type="video/mp4">
+            </video>
+        </div>
+
+        <p>Just looking so sexy here😍</p>
+
+        <!-- Next button -->
+        <a href="{% url 'story7' %}" class="ig-btn">Next →</a>
+
+    </div>
+
+</body>
+</html>

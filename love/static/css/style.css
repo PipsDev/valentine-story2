@@ -1,0 +1,1453 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: url("{% static 'images/background1.jpg' %}") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.4); /* soft black overlay */
+    position: fixed;
+    inset: 0;
+    z-index: -1;  
+}
+
+.content {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+    color: rgb(203, 157, 203); /* ensures text is visible */
+    padding-top: 500px;
+    animation: fadeIn 1.2s ease;
+    padding: -25px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.fade-in {
+    animation: fade 1.5s ease-in;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+
+    filter: brightness(55%) blur(2px); /* makes text readable */
+    z-index: -2;
+}
+
+.size {
+    font-size: 20px;
+}
+
+.h1-size{
+    font-size: 20px;
+}
+
+.next-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+
+    background: linear-gradient(135deg, #7b2ff7, #b245ff);
+    color: white;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    border-radius: 40px;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(123, 47, 247, 0.4);
+
+    transition: 0.3s ease;
+}
+/* 📱 Mobile responsive */
+@media (max-width: 768px) {
+    .next-btn {
+        width: 85%;
+        display: block;
+        margin: 25px auto;
+        font-size: 20px;
+        padding: 16px;
+    }
+}
+
+.next-btn:hover {
+    background: #9333ea;
+    transform: scale(1.05);
+}
+
+
+/* story 2 */
+
+/* purple gradient background */
+.story2-bg {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #2b0a3d, #5b1a7a, #8e44ad);
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* glass card */
+.glass-card {
+    position: relative;
+    max-width: 600px;
+    margin: 12vh auto;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* text */
+.glass-card h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.glass-card p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.highlight {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffb3ff;
+}
+
+/* modern button */
+.next-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 30px;
+    background: #a855f7;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* flowers container */
+.flowers {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
+
+.flower {
+    position: absolute;
+    width: 50px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .glass-card {
+        margin: 10vh 15px;
+        padding: 25px;
+        border-radius: 15px;
+        max-width: calc(100% - 30px);
+    }
+
+    .glass-card h1 {
+        font-size: 22px;
+    }
+
+    .glass-card p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .highlight {
+        font-size: 18px;
+    }
+
+    .next-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    .flower {
+        width: 20px; /* smaller flowers for mobile */
+    }
+}
+
+.cute-btn {
+    background: linear-gradient(135deg, #a86eff, #d499ff);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Hover effect */
+.cute-btn:hover {
+    transform: translateX(-50%) translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    background: linear-gradient(135deg, #d499ff, #a86eff);
+}
+
+/* Gentle floating animation */
+@keyframes float {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-8px); }
+}
+
+/* new control for play/pause */
+/* ===============================
+   MUSIC CONTROL (LOCKED POSITION)
+================================ */
+
+.music-control {
+    position: fixed !important;
+    bottom: 25px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+/* text above button */
+.music-text {
+    margin-bottom: 8px;
+    color: #c084fc;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* cute round button */
+.cute-btn {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: linear-gradient(45deg, #a855f7, #ec4899);
+    color: white;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(168,85,247,0.4);
+
+    transition: 0.3s;
+}
+
+/* hover effect */
+.cute-btn:hover {
+    transform: scale(1.1);
+}
+
+/* glowing while playing */
+.cute-btn.playing {
+    animation: glowPulse 1.3s infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {
+        box-shadow: 0 0 10px #a855f7;
+    }
+    to {
+        box-shadow: 0 0 30px #ec4899;
+    }
+}
+
+
+/* Page 2 container */
+.page2-container {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 25px;
+    text-align: center;
+    background: rgba(155, 77, 255, 0.1); /* soft purple background */
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Headings and paragraphs */
+.page2-container h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.page2-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Input field */
+.page2-container input[type="text"] {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.next-btn {
+    background: #9b4dff; /* purple */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+    background: #7a33cc;
+    transform: scale(1.05);
+}
+
+/* Fade-in effect */
+.fade-in {
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .page2-container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .page2-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .page2-container p {
+        font-size: 1rem;
+    }
+
+    .next-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Full page background */
+body.page2-bg {
+    background: linear-gradient(135deg, #9b4dff, #6a00d4); /* purple gradient */
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.page2-container {
+    background: rgba(255, 255, 255, 0.05); /* very soft transparency */
+    backdrop-filter: blur(10px);
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+/* Full page purple gradient background */
+body.page1-bg {
+    background: linear-gradient(135deg, #9b4dff, #6a00d4);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+}
+
+/* Overlay for soft glow */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Container for content */
+.page1-container {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.05); /* soft transparency */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Headings */
+.page1-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Input field */
+.page1-container input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.next-btn {
+    background: #9b4dff;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+    background: #7a33cc;
+    transform: scale(1.05);
+}
+
+/* Fade-in effect */
+.fade-in {
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .page1-container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .page1-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .next-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+
+/* Full page pink gradient background */
+body.wrong-name-bg {
+    background: linear-gradient(135deg, #ff9ecb, #ff69a0); /* pink gradient */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+}
+
+/* Overlay for soft glow */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+/* Container for content */
+.wrong-name-container {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.05); /* soft transparency */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Headings */
+.wrong-name-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.wrong-name-container p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Button */
+.next-btn {
+    background: #ff69a0; /* bright pink */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.next-btn:hover {
+    background: #ff4d88; /* darker pink */
+    transform: scale(1.05);
+}
+
+/* Fade-in effect */
+.fade-in {
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .wrong-name-container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .wrong-name-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .next-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Only for wrong-name button */
+.wrong-btn {
+    background: #ed5eeb; /* pink */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.wrong-btn:hover {
+    background: #ed5eeb;
+    transform: scale(1.05);
+}
+
+
+/* Full page story background */
+.story3-bg {
+    position: relative;
+    background: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+/* Dark overlay for readability */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+/* Memory container block */
+.memory-container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    height: 70vh;  /* fixed block height */
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+/* Video styling */
+.memory-video {
+    width: 90%;
+    max-width: 380px;   /* perfect phone size */
+    height: 60vh;       /* smaller height */
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+
+/* Text overlay */
+.memory-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+    color: white;
+}
+
+
+/* Next button */
+.next-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #9b59b6;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.next-btn:hover {
+    background: #8e44ad;
+    transform: scale(1.05);
+}
+
+/* Fade-in animation */
+.fade-in {
+    animation: fadeIn 1.5s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .memory-container {
+        height: 60vh;
+    }
+    .memory-container h1 {
+        font-size: 1.2rem;
+    }
+    .memory-container p {
+        font-size: 1rem;
+    }
+    .next-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* story4 */
+
+.story4-ig {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* video fills whole screen */
+.ig-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+/* top text like IG caption */
+.ig-top {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    z-index: 2;
+    color: white;
+}
+
+/* bottom area */
+.ig-bottom {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    color: white;
+}
+
+/* text style */
+.ig-bottom p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px black;
+}
+
+/* Instagram style button */
+.ig-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #8a2be2, #c77dff);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(199,125,255,0.6);
+}
+
+
+/* story 5 */
+.story5-card {
+    max-width: 500px;        /* card width like IG feed */
+    margin: 20px auto;       /* center on page */
+    background: #1e1e1e;     /* dark background */
+    border-radius: 20px;     /* rounded corners */
+    overflow: hidden;        /* clip video corners */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body.story5-bg {
+    background: #903adb; /* deep purple background */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* card starts near top */
+    padding: 40px 0;
+}
+
+
+.story5-card h1 {
+    font-size: 1.3rem;
+    margin: 15px 20px 5px 20px;
+}
+
+.story5-card p {
+    font-size: 1rem;
+    margin: 5px 20px 15px 20px;
+}
+
+/* video inside card */
+.story5-card video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* button under card */
+.story5-card .ig-btn {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 0 20px 20px 20px;
+    padding: 12px 0;
+    background: linear-gradient(45deg, #a855f7, #7c3aed);
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.story5-card .ig-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(124, 58, 237, 0.5);
+}
+
+/* responsive */
+@media (max-width: 480px) {
+    .story5-card {
+        max-width: 90%;
+    }
+    .story5-card h1 {
+        font-size: 1.1rem;
+    }
+    .story5-card p {
+        font-size: 0.9rem;
+    }
+    .story5-card .ig-btn {
+        font-size: 14px;
+    }
+}
+
+/* story6 */
+
+/* Story 6 background */
+body.story6-bg {
+    background: linear-gradient(180deg, #3b0b6f, #120030);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+}
+
+/* Story card */
+.story6-card {
+    max-width: 600px;
+    width: 90%;
+    background: #1e1e1e;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding-bottom: 20px;
+}
+
+/* Text */
+.story6-card h1 {
+    font-size: 1.3rem;
+    margin: 15px 20px 5px 20px;
+}
+.story6-card p {
+    font-size: 1rem;
+    margin: 5px 20px 15px 20px;
+}
+
+/* Video row for side by side */
+.video-row {
+    display: flex;
+    gap: 10px;  /* space between videos */
+    padding: 0 20px;
+}
+
+/* Mini videos side by side */
+.video-row .mini-video {
+    flex: 1;              /* take equal space */
+    height: 200px;        /* fixed height */
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Button */
+.story6-card .ig-btn {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 0 20px 20px 20px;
+    padding: 12px 0;
+    background: linear-gradient(45deg, #a855f7, #7c3aed);
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.story6-card .ig-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(124, 58, 237, 0.5);
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+    .story6-card {
+        max-width: 90%;
+    }
+    .story6-card h1 {
+        font-size: 1.1rem;
+    }
+    .story6-card p {
+        font-size: 0.9rem;
+    }
+    .story6-card .ig-btn {
+        font-size: 14px;
+    }
+    .video-row {
+        flex-direction: column;  /* stack videos on small screens */
+    }
+    .video-row .mini-video {
+        height: 150px;
+    }
+}
+
+/* story7 */
+
+.story7-bg {
+    background: linear-gradient(to bottom, #fbc2eb, #a6c1ee); /* soft pastel gradient */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.story7-bg .overlay {
+    position: fixed; /* or absolute */
+    inset: 0;
+    background: rgba(0,0,0,0.4); /* soft overlay */
+    z-index: 1; /* make sure content is above */
+    pointer-events: none; /* ALLOW clicks through overlay */
+}
+
+.story7-container {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 2;
+}
+
+.choices {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.choice-btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.yes-btn {
+    background: linear-gradient(45deg, #a855f7, #7c3aed);
+}
+
+.no-btn {
+    background: linear-gradient(45deg, #f43f5e, #f87171);
+}
+
+.choice-btn:hover {
+    transform: scale(1.1);
+}
+
+/* story 8 */
+
+/* Floating emoji petals */
+.floating-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* clicks pass through */
+    overflow: hidden;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    animation: float 8s linear infinite;
+}
+
+/* float animation */
+@keyframes float {
+    0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(-10vh) translateX(50px); opacity: 0; }
+}
+
+/* Confessions container */
+.story8-container {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+.story8-container .confession {
+    opacity: 0;
+    animation: fadeInConfession 1s forwards;
+    animation-delay: 1s;
+    margin-bottom: 20px;
+}
+
+/* Fade in each confession sequentially */
+.story8-container .confession:nth-child(2) { animation-delay: 2s; }
+.story8-container .confession:nth-child(3) { animation-delay: 3s; }
+
+.confession{
+    color: #5f3465;
+}
+
+@keyframes fadeInConfession {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Next button */
+.next-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 28px;
+    background: linear-gradient(45deg,#a855f7,#7c3aed);
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+/* =========================
+   STORY 9 STYLING
+========================= */
+
+.story9-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f6e6ff, #e7d4ff, #ffe9f5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* slightly narrower for reading like poetry */
+.story9-card {
+    max-width: 520px;
+    text-align: center;
+}
+
+.story9-card p {
+    margin: 18px 0;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    color: #4b2a7a;
+}
+
+/* stronger emotional line */
+.story9-card .highlight {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #9b4dff;
+}
+
+
+/* =========================
+   FIXED MUSIC CONTROL
+========================= */
+
+.music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.cute-btn {
+    padding: 10px 16px;
+    border-radius: 25px;
+    border: none;
+    background: #9b4dff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.cute-btn:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* =========================
+   STORY 9 LAST PAGE
+   Clean + isolated styling
+========================= */
+
+/* =========================
+   PAGE BACKGROUND 💜
+========================= */
+/* ========== PAGE BACKGROUND ========== */
+/* =========================
+   BODY & BACKGROUND
+========================= */
+.last-bg {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 18px;
+    background: linear-gradient(135deg, #fbc2eb, #a18cd1);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.last-container {
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.last-container h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.big-btn {
+    display: inline-block;
+    padding: 16px 36px;
+    border-radius: 40px;
+    background: linear-gradient(45deg, #ec4899, #a855f7);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: 0.25s ease;
+    position: relative; /* fixed within container */
+    z-index: 20;       /* always on top */
+}
+
+.big-btn:hover {
+    transform: scale(1.06);
+}
+
+/* =========================
+   LETTER CARD
+========================= */
+.hidden-message {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.8s ease, max-height 0.8s ease;
+    pointer-events: none;
+}
+
+.hidden-message.show {
+    max-height: 5000px; /* enough to fit content */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.letter {
+    max-width: 520px;
+    margin: 25px auto 0;
+    padding: 30px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+.letter p {
+    margin: 14px 0;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    color: #5a2a8a;
+}
+
+.big-line {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #7c3aed;
+}
+
+.valentine {
+    margin-top: 22px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #e11d48;
+}
+
+/* =========================
+   MOBILE TWEAKS
+========================= */
+@media (max-width: 480px) {
+    .letter {
+        padding: 22px;
+    }
+    .letter p {
+        font-size: 0.95rem;
+    }
+    .big-btn {
+        width: 100%;
+    }
+}
+
+
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================
+   BACKGROUND
+======================== */
+
+.story10-bg {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(135deg, #fbc2eb, #a18cd1);
+}
+
+
+/* ========================
+   CARD
+======================== */
+
+.story10-card {
+    width: 100%;
+    max-width: 520px;
+
+    padding: 50px 35px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+
+    border-radius: 24px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+
+    animation: fadeIn 1.6s ease;
+}
+
+
+/* ========================
+   TEXT
+======================== */
+
+.story10-card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #7c3aed;
+}
+
+.main-line {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.highlight {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e11d48;
+    margin-bottom: 30px;
+
+    animation: softPulse 2.5s infinite;
+}
+
+.signature {
+    margin-bottom: 35px;
+    font-style: italic;
+    color: #666;
+}
+
+
+/* ========================
+   BUTTONS
+======================== */
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 22px;
+    border-radius: 30px;
+
+    text-decoration: none;
+    color: white;
+
+    background: #a855f7;
+    transition: 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn.alt {
+    background: #6b7280;
+}
+
+
+/* ========================
+   MUSIC BUTTON
+======================== */
+
+.music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.music-control button {
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ========================
+   ANIMATIONS
+======================== */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes softPulse {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+
+/* ========================
+   MOBILE
+======================== */
+
+@media (max-width: 480px) {
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

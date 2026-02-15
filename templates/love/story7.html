@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>💜 Story 7</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="story7-bg">
+
+    <!-- Overlay for soft glow -->
+    <div class="overlay"></div>
+
+    <!-- Story content card -->
+    <div class="story7-container fade-in">
+        <h1>💌 Hey!</h1>
+        <p>Are you enjoying yourself so far? 😅</p>
+        <p>Sorry it’s a bit long, but I hope it’s worth it 💜</p>
+        <p>Do you want to continue?</p>
+
+        <!-- Yes/No buttons -->
+        <div class="choices">
+            <a href="{% url 'story8' %}" class="choice-btn yes-btn">Yes 💖</a>
+            <a href="{% url 'end_story' %}" class="choice-btn no-btn">No 😢</a>
+        </div>
+    </div>
+
+    <!-- Optional: soft background music -->
+    <audio autoplay loop>
+        <source src="{% static 'music/love.mp3' %}" type="audio/mpeg">
+    </audio>
+
+</body>
+</html>

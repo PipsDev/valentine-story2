@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory 💜</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="story3-bg">
+
+    <!-- Dark overlay -->
+    <div class="overlay"></div>
+
+    <!-- Memory container -->
+    <div class="memory-container fade-in">
+        <h1>Our Special Moment 💜</h1>
+        <p>Remember this day?</p>
+
+        <!-- Video -->
+        <video autoplay muted loop playsinline class="memory-video">
+            <source src="{% static 'videos/memory1.mp4' %}" type="video/mp4">
+        </video>
+
+        <p>Every time I watch this, I smile 😊</p>
+
+        <!-- Next memory page -->
+        <a href="{% url 'story4' %}" class="next-btn">Next →</a>
+    </div>
+
+    <!-- Background music -->
+    <audio autoplay loop>
+        <source src="{% static 'music/love.mp3' %}" type="audio/mpeg">
+    </audio>
+
+</body>
+</html>

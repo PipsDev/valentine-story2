@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>💜 Story 10</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="story10-bg">
+
+    <!-- soft floating flowers if you still want -->
+    <div class="flowers"></div>
+
+    <div class="story10-card">
+
+        <h1>💜 And After Everything…</h1>
+
+        <p class="main-line">
+            No matter what happens next…
+        </p>
+
+        <p class="highlight">
+            I’m grateful it was you.
+        </p>
+
+        <p class="signature">
+             Isaac
+        </p>
+
+        <!-- REQUIRED BUTTONS (kept exactly how you asked) -->
+        <div class="buttons">
+            <a href="{% url 'story' %}" class="btn">🔁 Read Again</a>
+            <a href="{% url 'end_story' %}" class="btn alt">🌙 The End</a>
+        </div>
+
+    </div>
+
+
+
+<script src="{% static 'js/flowers.js' %}"></script>
+
+</body>
+</html>

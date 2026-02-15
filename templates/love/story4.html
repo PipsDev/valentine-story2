@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Us 💜</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="story4-ig">
+
+    <!-- Fullscreen video -->
+    <video autoplay muted loop playsinline class="ig-video">
+        <source src="{% static 'videos/us_together.mp4' %}" type="video/mp4">
+    </video>
+
+    <!-- overlay -->
+    <div class="overlay"></div>
+
+    <!-- top text -->
+    <div class="ig-top">
+        <h2>Just us 💜</h2>
+    </div>
+
+    <!-- bottom text -->
+    <div class="ig-bottom">
+        <p>Being with you feels very good honestly.</p>
+        <a href="{% url 'story5' %}" class="ig-btn">Next →</a>
+    </div>
+
+</body>
+
+</html>

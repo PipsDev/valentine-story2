@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="story2-bg">
+
+    <!-- flowers -->
+    <div class="flowers"></div>
+
+    <!-- main card -->
+    <div class="glass-card fade-in">
+
+        <h1>💜 A Little Confession</h1>
+
+        <p>
+            Since you said you might cut everyone off after school…
+        </p>
+
+        <p>
+            And I’m not part of your plans after school,
+            I’ve decided to start doing things for us that will make us happy.
+        </p>
+
+        <p>
+            Genuinely, I haven’t been happy for a while,
+            but I don’t want to keep anything from you anymore.
+            I want to be honest about how I feel…
+        </p>
+
+        <p class="highlight">
+            Honestly, I don’t ever want to lose you, baby.
+        </p>
+
+        <p>
+            Because what we have means too much to me 💜
+        </p>
+
+        <a href="{% url 'story3' %}" class="next-btn">Next →</a>
+
+    </div>
+
+
+<script src="{% static 'js/flowers.js' %}"></script>
+
+</body>
+</html>

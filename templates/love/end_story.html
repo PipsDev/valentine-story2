@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>💜 The End</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="story7-bg">
+
+    <!-- Overlay for soft glow -->
+    <div class="overlay"></div>
+
+    <!-- Content card -->
+    <div class="story7-container fade-in" style="padding: 20px; max-width: 450px; margin: 80px auto; text-align: center;">
+        <h1> Thanks for watching!</h1>
+        <p>Hope you enjoyed it </p>
+        <p>Even though it was a bit long, I really wanted to share these memories with you 💜</p>
+
+        <a href="{% url 'page2' %}" class="choice-btn yes-btn" style="display:inline-block; margin-top: 20px;">Restart 💖</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome ❤️</title>
+</head>
+<body class="fade-in page2-bg">
+
+    <div class="page2-container">
+        <h1>Welcome, {{ name }} 💖</h1>
+        <p>Can you please enter the name of your boyfriend to continue?</p>
+
+        <form method="POST" action="{% url 'check' %}">
+            {% csrf_token %}
+            <input type="text" name="bf_name" placeholder="Enter boyfriend's name" required>
+            <button type="submit" class="next-btn">Continue</button>
+        </form>
+    </div>
+
+</body>
+</html>

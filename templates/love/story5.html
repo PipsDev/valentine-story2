@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory 💜</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="story5-bg">
+<div class="story5-card">
+
+    <h1>Another Memory</h1>
+    <p>This was my favorite video then, like i watched it over over</p>
+    <p> It turns me on🤣</p>
+
+    <video autoplay muted loop playsinline>
+        <source src="{% static 'videos/memory2.mp4' %}" type="video/mp4">
+    </video>
+
+    <a href="{% url 'story6' %}" class="ig-btn">Next →</a>
+</div>
+</body>
+</html>

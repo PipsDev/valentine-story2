@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body class="fade-in">
+
+    <!-- Background video -->
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="{% static 'videos/our_first_date.mp4' %}" type="video/mp4">
+    </video>
+
+    <!-- Dark overlay -->
+    <div class="overlay"></div>
+
+    <!-- Text -->
+    <div class="content">
+        <h1 class="h1-size">one of the first video you sent to me 💜</h1>
+        <p class="size">it was our first december</p>
+        <p class="size">I remember how shy you were before sending this video 🤣🤣</p>
+
+        <a href="{% url 'story2' %}" class="next-btn">Next ➜</a>
+    </div>
+
+    <!-- music continues -->
+    <audio autoplay loop>
+        <source src="{% static 'music/love.mp3' %}" type="audio/mpeg">
+    </audio>
+
+</body>
+</html>

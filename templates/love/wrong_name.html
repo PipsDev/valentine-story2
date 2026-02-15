@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oops!</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="fade-in wrong-name-bg">
+
+    <!-- Overlay for soft pink glow -->
+    <div class="overlay"></div>
+
+    <!-- Page content card -->
+    <div class="wrong-name-container">
+        <h1>Oops! That's not the right name 😅</h1>
+        <p>Try again, please ❤️</p>
+        <a href="{% url 'page2' %}" class="wrong-btn">Go Back</a>
+    </div>
+
+</body>
+</html>
