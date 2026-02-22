@@ -20,6 +20,6 @@ from love import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.home, name='home'),
+    path('', views.page1, name='home'),
     path('', include('love.urls')),
 ]
